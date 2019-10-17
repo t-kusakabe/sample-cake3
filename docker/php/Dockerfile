@@ -8,8 +8,11 @@ WORKDIR /sample-cake-dusk-app
 RUN apk add --no-cache \
   zlib-dev \
   libzip-dev \
-  icu-libs
+  icu-dev
 
 RUN docker-php-ext-install \
   pdo_mysql \
-  zip
+  zip \
+  intl
+
+# RUN composer install
